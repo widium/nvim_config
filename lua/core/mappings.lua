@@ -16,6 +16,10 @@ M.general = {
   },
 
   n = {
+    -- move line with alt
+    ["<A-Down>"] = { ":m '>+1<CR>gv=gv", "Move line down" },
+    ["<A-Up>"] = { ":m '<-2<CR>gv=gv", "Move line up" },
+
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
@@ -59,6 +63,10 @@ M.general = {
   },
 
   v = {
+    -- moove line with alt
+    ["<A-Down>"] = { ":m '>+1<CR>gv=gv", "Move line down" },
+    ["<A-Up>"] = { ":m '<-2<CR>gv=gv", "Move line up" },
+
     ["<Up>"] = { 'v:count || mode(1)[0:1] == "no" ? "k" : "gk"', "Move up", opts = { expr = true } },
     ["<Down>"] = { 'v:count || mode(1)[0:1] == "no" ? "j" : "gj"', "Move down", opts = { expr = true } },
     ["<"] = { "<gv", "Indent line" },
