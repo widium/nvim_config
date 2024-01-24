@@ -21,3 +21,4 @@ vim.opt.rtp:prepend(lazypath)
 require "plugins"
 vim.opt.shell = "zsh"
 vim.opt.clipboard = "unnamedplus"
+vim.wo.relativenumber = true
